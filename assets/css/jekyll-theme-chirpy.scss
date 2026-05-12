@@ -651,3 +651,180 @@ footer p:last-child {
     max-width: 180px !important;
   }
 }
+
+/* =========================
+   Final code block layout fix
+   Fix wide line-number gap
+   ========================= */
+
+.highlighter-rouge {
+  background: rgba(6, 10, 15, 0.96) !important;
+  border: 1px solid rgba(88, 166, 255, 0.24) !important;
+  border-radius: 18px !important;
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.42),
+    0 0 24px rgba(0, 255, 156, 0.04) !important;
+  overflow: hidden !important;
+  margin: 1.5rem 0 !important;
+  text-align: left !important;
+}
+
+/* Remove inner box */
+.highlighter-rouge div.highlight,
+.highlighter-rouge .highlight,
+.highlighter-rouge figure.highlight,
+div.highlight,
+figure.highlight {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: auto !important;
+  text-align: left !important;
+}
+
+/* Important: use auto layout, not fixed */
+.highlighter-rouge table,
+.highlighter-rouge table.rouge-table,
+.highlighter-rouge .rouge-table,
+.highlight table,
+.highlight table.rouge-table {
+  width: 100% !important;
+  margin: 0 !important;
+  border: none !important;
+  border-collapse: collapse !important;
+  table-layout: auto !important;
+  background: transparent !important;
+}
+
+/* Remove cell borders */
+.highlighter-rouge td,
+.highlighter-rouge th,
+.highlight td,
+.highlight th {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Line number column: fixed narrow width */
+.highlighter-rouge td.rouge-gutter,
+.highlight td.rouge-gutter {
+  width: 3.25rem !important;
+  min-width: 3.25rem !important;
+  max-width: 3.25rem !important;
+  padding: 1rem 0.65rem !important;
+  text-align: right !important;
+  vertical-align: top !important;
+  user-select: none !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+  border-right: 1px solid rgba(88, 166, 255, 0.16) !important;
+}
+
+/* Line number text */
+.highlighter-rouge td.rouge-gutter pre,
+.highlighter-rouge td.rouge-gutter code,
+.highlighter-rouge .lineno,
+.highlight td.rouge-gutter pre,
+.highlight td.rouge-gutter code,
+.highlight .lineno {
+  color: rgba(230, 237, 243, 0.42) !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+  min-width: 0 !important;
+  text-align: right !important;
+  line-height: 1.75 !important;
+  font-size: 0.95rem !important;
+  font-family: "Cascadia Code", "Fira Code", Consolas, "Courier New", monospace !important;
+}
+
+/* Code column: start close to line numbers */
+.highlighter-rouge td.rouge-code,
+.highlight td.rouge-code {
+  width: auto !important;
+  padding: 1rem 1.2rem 1rem 0.9rem !important;
+  text-align: left !important;
+  vertical-align: top !important;
+  background: transparent !important;
+}
+
+/* Remove inner pre/code styling */
+.highlighter-rouge pre,
+.highlighter-rouge code,
+.highlight pre,
+.highlight code {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Actual code text */
+.highlighter-rouge td.rouge-code pre,
+.highlight td.rouge-code pre {
+  color: #e6edf3 !important;
+  line-height: 1.75 !important;
+  font-size: 0.95rem !important;
+  white-space: pre !important;
+  tab-size: 4 !important;
+  text-align: left !important;
+}
+
+.highlighter-rouge td.rouge-code code,
+.highlight td.rouge-code code {
+  color: #e6edf3 !important;
+  font-family: "Cascadia Code", "Fira Code", Consolas, "Courier New", monospace !important;
+  font-size: inherit !important;
+  white-space: pre !important;
+  display: block !important;
+  text-align: left !important;
+}
+
+/* Code block header */
+.code-header {
+  background:
+    linear-gradient(90deg, rgba(17, 24, 39, 0.96), rgba(8, 13, 20, 0.96)) !important;
+  border-bottom: 1px solid rgba(88, 166, 255, 0.18) !important;
+  color: rgba(230, 237, 243, 0.68) !important;
+  min-height: 2.7rem !important;
+}
+
+.code-header button,
+.code-header i,
+.code-header span {
+  color: rgba(230, 237, 243, 0.65) !important;
+}
+
+.code-header button:hover,
+.code-header i:hover {
+  color: #00ff9c !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .highlighter-rouge td.rouge-gutter,
+  .highlight td.rouge-gutter {
+    width: 2.7rem !important;
+    min-width: 2.7rem !important;
+    max-width: 2.7rem !important;
+    padding: 1rem 0.45rem !important;
+  }
+
+  .highlighter-rouge td.rouge-code,
+  .highlight td.rouge-code {
+    padding: 1rem 0.85rem !important;
+  }
+
+  .highlighter-rouge td.rouge-code pre,
+  .highlight td.rouge-code pre {
+    font-size: 0.88rem !important;
+  }
+}
