@@ -912,3 +912,76 @@ figure.highlight {
     padding-left: 0.65rem !important;
   }
 }
+
+/* =========================
+   Final balanced code spacing
+   Not too far, not too close
+   ========================= */
+
+.highlighter-rouge table.rouge-table tbody tr,
+.highlight table.rouge-table tbody tr {
+  display: grid !important;
+  grid-template-columns: 4.2rem minmax(0, 1fr) !important;
+  align-items: start !important;
+}
+
+.highlighter-rouge td.rouge-gutter,
+.highlight td.rouge-gutter {
+  width: 4.2rem !important;
+  min-width: 4.2rem !important;
+  max-width: 4.2rem !important;
+  padding: 1rem 0.9rem 1rem 0.5rem !important;
+  text-align: right !important;
+  border-right: 1px solid rgba(88, 166, 255, 0.16) !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+}
+
+.highlighter-rouge td.rouge-code,
+.highlight td.rouge-code {
+  padding: 1rem 1.2rem 1rem 1rem !important;
+  text-align: left !important;
+  width: auto !important;
+  min-width: 0 !important;
+}
+
+.highlighter-rouge td.rouge-code pre,
+.highlighter-rouge td.rouge-code code,
+.highlight td.rouge-code pre,
+.highlight td.rouge-code code {
+  text-align: left !important;
+  display: block !important;
+  white-space: pre !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.highlighter-rouge td.rouge-gutter pre,
+.highlighter-rouge td.rouge-gutter code,
+.highlight td.rouge-gutter pre,
+.highlight td.rouge-gutter code {
+  text-align: right !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Mobile balanced spacing */
+
+@media (max-width: 768px) {
+  .highlighter-rouge table.rouge-table tbody tr,
+  .highlight table.rouge-table tbody tr {
+    grid-template-columns: 3.4rem minmax(0, 1fr) !important;
+  }
+
+  .highlighter-rouge td.rouge-gutter,
+  .highlight td.rouge-gutter {
+    width: 3.4rem !important;
+    min-width: 3.4rem !important;
+    max-width: 3.4rem !important;
+    padding: 1rem 0.65rem 1rem 0.35rem !important;
+  }
+
+  .highlighter-rouge td.rouge-code,
+  .highlight td.rouge-code {
+    padding-left: 0.85rem !important;
+  }
+}
