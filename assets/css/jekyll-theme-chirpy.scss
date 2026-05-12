@@ -828,3 +828,87 @@ figure.highlight {
     font-size: 0.88rem !important;
   }
 }
+
+/* =========================
+   Final compact code spacing
+   Make line number and command closer
+   ========================= */
+
+.highlighter-rouge table.rouge-table,
+.highlight table.rouge-table {
+  width: 100% !important;
+  table-layout: auto !important;
+  border-collapse: collapse !important;
+}
+
+/* Force compact two-column layout */
+.highlighter-rouge table.rouge-table tbody tr,
+.highlight table.rouge-table tbody tr {
+  display: grid !important;
+  grid-template-columns: 3rem minmax(0, 1fr) !important;
+  align-items: start !important;
+}
+
+/* Narrow line number area */
+.highlighter-rouge td.rouge-gutter,
+.highlight td.rouge-gutter {
+  width: 3rem !important;
+  min-width: 3rem !important;
+  max-width: 3rem !important;
+  padding: 1rem 0.55rem 1rem 0.35rem !important;
+  text-align: right !important;
+  border-right: 1px solid rgba(88, 166, 255, 0.16) !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+}
+
+/* Code starts closer to line number */
+.highlighter-rouge td.rouge-code,
+.highlight td.rouge-code {
+  padding: 1rem 1rem 1rem 0.75rem !important;
+  text-align: left !important;
+  width: auto !important;
+  min-width: 0 !important;
+}
+
+/* Remove any inherited centering */
+.highlighter-rouge td.rouge-code pre,
+.highlighter-rouge td.rouge-code code,
+.highlight td.rouge-code pre,
+.highlight td.rouge-code code {
+  text-align: left !important;
+  display: block !important;
+  white-space: pre !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Keep line numbers aligned right */
+.highlighter-rouge td.rouge-gutter pre,
+.highlighter-rouge td.rouge-gutter code,
+.highlight td.rouge-gutter pre,
+.highlight td.rouge-gutter code {
+  text-align: right !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Even closer spacing on small screens */
+@media (max-width: 768px) {
+  .highlighter-rouge table.rouge-table tbody tr,
+  .highlight table.rouge-table tbody tr {
+    grid-template-columns: 2.6rem minmax(0, 1fr) !important;
+  }
+
+  .highlighter-rouge td.rouge-gutter,
+  .highlight td.rouge-gutter {
+    width: 2.6rem !important;
+    min-width: 2.6rem !important;
+    max-width: 2.6rem !important;
+    padding: 1rem 0.45rem 1rem 0.25rem !important;
+  }
+
+  .highlighter-rouge td.rouge-code,
+  .highlight td.rouge-code {
+    padding-left: 0.65rem !important;
+  }
+}
