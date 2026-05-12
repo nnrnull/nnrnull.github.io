@@ -97,3 +97,47 @@ button {
   background: rgba(5, 7, 10, 0.86);
   backdrop-filter: blur(10px);
 }
+
+/* Main content modern background */
+
+#main-wrapper {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(0, 255, 156, 0.08), transparent 28%),
+    radial-gradient(circle at 85% 20%, rgba(88, 166, 255, 0.08), transparent 30%),
+    linear-gradient(135deg, #05070a 0%, #080d14 45%, #000000 100%);
+}
+
+#core-wrapper {
+  min-height: 100vh;
+}
+
+/* Modern minimal footer */
+
+footer {
+  background: transparent !important;
+  border-top: 1px solid rgba(0, 255, 156, 0.18);
+  box-shadow: none !important;
+  margin-top: 3rem;
+  padding: 1.2rem 0;
+}
+
+footer,
+footer p,
+footer span {
+  color: rgba(230, 237, 243, 0.65) !important;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: #00ff9c !important;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #58a6ff !important;
+}
+
+/* Hide "Using the Chirpy theme for Jekyll" text */
+footer p:last-child {
+  display: none !important;
+}
